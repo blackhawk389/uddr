@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.uk.uddr.fragment.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="8dp"
+        android:visibility="gone" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel_uddr"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/uddr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_home_img" />
+
+        <ImageView
+            android:id="@+id/img_uddr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/ic_uddr_white" />
+
+        <com.uk.uddr.utils.CTextSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_uddr"
+            android:layout_marginLeft="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/rightplace"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_location"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/rel_uddr"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-52dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/btn_green_bg">
+
+        <ImageView
+            android:id="@+id/icon_map"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:padding="10dp"
+            android:src="@mipmap/ic_marker_blue" />
+
+        <View
+            android:id="@+id/icon_view"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/icon_map"
+            android:background="@color/green"
+            android:padding="5dp" />
+
+        <com.uk.uddr.utils.CTextregular
+            android:id="@+id/txt_zipcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/icon_view"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="16dp"
+            android:text="Enter Postcode"
+            android:textAlignment="center"
+            android:textColor="@color/light_black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <com.uk.uddr.utils.CTextBold
+        android:id="@+id/products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_location"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Choose a local service"
+        android:textColor="@color/uddrblack"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+        <com.uk.uddr.utils.CTextSemiBold
+            android:id="@+id/txt_catviewall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_location"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:text="VIEW ALL"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/products"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <com.uk.uddr.utils.CTextBold
+        android:id="@+id/productfeature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycleview"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Choose a featured partner"
+        android:textColor="@color/uddrblack"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:textStyle="bold" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/productfeature"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp">
+
+    </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</ScrollView>

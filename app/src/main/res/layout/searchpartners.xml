@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="8dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/relativehead"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:elevation="2dp">
+
+
+        <com.uk.uddr.utils.CTextSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:text="@string/searchcategory"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:id="@+id/rel_search"
+        android:background="#f1f1f1"
+        android:elevation="2dp"
+        android:layout_below="@+id/relativehead">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_search"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"/>
+
+        <com.uk.uddr.utils.CEditTextSemiBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="22dp"
+            android:hint="Search for local sevices"
+            android:background="@null"
+            android:textColor="#75000000"
+            android:id="@+id/edt_search"
+            android:textSize="16sp"
+            android:textStyle="bold" >
+            <requestFocus/>
+
+        </com.uk.uddr.utils.CEditTextSemiBold>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_cross"
+            android:id="@+id/img_cross"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"/>
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_search">
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_top"
+                android:id="@+id/recycler_partners"/>
+
+
+
+        </RelativeLayout>
+
+
+
+
+</RelativeLayout>

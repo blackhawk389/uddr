@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="164dp"
+    android:layout_height="wrap_content"
+    android:minHeight="268dp"
+    android:elevation="16dp"
+    android:layout_margin="8dp">
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/card_storetype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="32dp"
+                    android:layout_marginTop="8dp">
+
+                    <com.uk.uddr.utils.CTextSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:id="@+id/txt_featured"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="5dp"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="5dp"
+                        android:background="@color/green"
+                        android:text="FEATURED"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_heart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4dp"
+                        android:src="@mipmap/ic_favourite"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/image_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:elevation="30dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="0dp">
+
+                    <ImageView
+                        android:id="@+id/type_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/demo" />
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+
+
+            <com.uk.uddr.utils.CTextBold
+                android:id="@+id/title"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:textSize="15sp"/>
+
+            <com.uk.uddr.utils.CTextSemiBold
+                android:id="@+id/txt_tag_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="8dp"
+                android:maxLines="1"
+                android:text="Try us and see the quality"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/dotted_bg"
+                android:layout_marginRight="8dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/mark"
+                    android:layout_centerVertical="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_location"/>
+
+                <com.uk.uddr.utils.CTextSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/mark"
+                    android:layout_centerVertical="true"
+                    android:textSize="11sp"
+                    android:maxLines="2"
+                    android:id="@+id/txt_address"
+                    android:gravity="left|center"
+                    android:layout_marginLeft="4dp"
+                    android:text="ndcdcn cncneu c  c ndcudncu"
+                    android:textColor="@color/dark_grey"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/dotted_bg"
+                android:layout_marginRight="8dp"/>
+
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:numStars="5"
+                android:stepSize="1.0"
+                android:rating="4"
+                android:theme="@style/RatingBar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.uk.uddr.utils.CTextregular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="11sp"
+                    android:text="4.5"
+                    android:id="@+id/txt_rating"/>
+
+                <com.uk.uddr.utils.CTextregular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/green"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="11sp"
+                    android:text="(49 Reviews)"
+                    android:id="@+id/txt_review"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

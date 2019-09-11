@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.uk.uddr.activity.LoginActivity">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="16dp"
+        android:background="@color/white"
+        android:id="@+id/header">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:elevation="8dp"
+            android:padding="12dp"
+            android:src="@mipmap/back_black" />
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/txt_partner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/uddrblack"
+            android:maxLines="1"
+            android:text="Login"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="10dp">
+
+
+
+        <ImageView
+            android:id="@+id/uddr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo"
+            />
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/uddr"
+            android:layout_marginTop="10dp"
+            android:text="@string/hello"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.uk.uddr.utils.CTextSemiBold
+            android:id="@+id/welcomeuddr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hello"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/light_dark_grey"
+            android:text="@string/welcome"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_head">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+           >
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:theme="@style/MyStyle">
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:inputType="textPersonName"
+                    android:textSize="18sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:theme="@style/MyStyle">
+
+                <EditText
+                    android:id="@+id/edt_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/pass"
+                    android:inputType="textPassword"
+                    android:textSize="18sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="40dp">
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="80dp"
+                    android:layout_toLeftOf="@+id/relativefor"
+                    android:background="@drawable/btn_login_bg"
+                    android:text="login"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.uk.uddr.utils.CTextSemiBold
+                        android:id="@+id/txt_forgot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:maxLines="1"
+                        android:text="Forgot password?"
+                        android:textColor="@color/green"
+                        android:textSize="15sp" />
+
+                    <!--<View-->
+                        <!--android:layout_width="140dp"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:layout_below="@+id/txt_forgot"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_marginTop="2dp"-->
+                        <!--android:layout_marginEnd="3dp"-->
+                        <!--android:layout_marginRight="3dp"-->
+                        <!--android:background="@color/light_grey"-->
+                        <!--android:textAlignment="center" />-->
+                </RelativeLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_below="@+id/no_network_bar"
+                android:id="@+id/FrameLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <Button
+                    android:background="@drawable/facebook_circle"
+                    android:layout_width="20dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/fb"
+                    android:textAllCaps="false"
+                    />
+            </FrameLayout>
+            <!--<com.facebook.login.widget.LoginButton-->
+                <!--android:id="@+id/login_button"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--style="@style/FacebookLoginButton"-->
+
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginTop="30dp" />-->
+
+            <FrameLayout
+                android:layout_below="@+id/no_network_bar"
+                android:id="@+id/FrameLayout2"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/sign_in_button"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:layout_height="40dp" />
+
+                <Button
+                    android:background="@drawable/facebook_circle"
+                    android:layout_width="20dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/fbg"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    />
+            </FrameLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/len_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:orientation="horizontal"
+                android:paddingBottom="24dp">
+
+                <com.uk.uddr.utils.CTextSemiBold
+                    android:id="@+id/dont_acc_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account?"
+                    android:textColor="@color/light_dark_grey"
+                    android:textSize="15sp" />
+
+                <com.uk.uddr.utils.CTextBold
+                    android:id="@+id/txt_createaccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/dont_acc_txt"
+                    android:text=" Sign Up."
+                    android:textColor="@color/uddrblack"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="left"
+                    android:layout_toRightOf="@+id/dont_acc_txt"
+                    android:layout_below="@+id/txt_createaccount"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/light_grey" />
+
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

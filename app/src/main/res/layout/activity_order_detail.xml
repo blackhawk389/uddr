@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.uk.uddr.activity.OrderDetailActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="8dp"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="16dp"
+        android:background="@color/white"
+        android:id="@+id/header">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:elevation="8dp"
+            android:padding="12dp"
+            android:src="@mipmap/back_black" />
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/txt_partner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/uddrblack"
+            android:maxLines="1"
+            android:text="@string/orderdetail"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativehead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp">
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/sign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Summary"
+            android:textColor="@color/black"
+            android:layout_marginLeft="25dp"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <com.uk.uddr.utils.CTextBold
+        android:id="@+id/txt_noitem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Item(s) in Cart"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rel_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/relativehead">
+
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/txt_ordernumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/light_dark_grey"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_orderstatus"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/txt_ordernumber"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_card_bg"
+            android:elevation="5dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/txt_Datetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_orderstatus"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:text="Date &amp; Time"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/relativetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_Datetime"
+            android:layout_marginLeft="25dp"
+            >
+
+            <com.uk.uddr.utils.CTextBold
+                android:id="@+id/txt_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_dark_grey"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/relativetime"
+            android:layout_marginTop="8dp"
+            android:background="@color/line"/>
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/txtview_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativetime"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="8dp"
+            android:text="Address"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/relativeaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtview_address"
+            android:layout_marginLeft="25dp"
+            >
+
+            <com.uk.uddr.utils.CTextBold
+                android:id="@+id/txt_addName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_dark_grey"
+                android:textSize="14sp" />
+
+            <com.uk.uddr.utils.CTextBold
+                android:id="@+id/txt_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_addName"
+                android:maxLines="2"
+                android:textColor="@color/light_dark_grey"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/relativeaddress"
+            android:layout_marginTop="8dp"
+            android:background="@color/line"/>
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/txtview_yourorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeaddress"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="8dp"
+            android:text="Your Order"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/txtview_yourorder"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/light_grey" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view2"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/white">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/recycleview"
+            android:layout_marginTop="8dp"
+            android:background="@color/line"/>
+
+        <RelativeLayout
+            android:id="@+id/relativebootom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/recycleview"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white">
+
+
+
+            <RelativeLayout
+                android:id="@+id/relative_subtotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.uk.uddr.utils.CTextBold
+                    android:id="@+id/txt_total1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sub total"
+                    android:layout_marginLeft="25dp"
+                    android:textColor="@color/light_dark_grey"
+                    android:textSize="15sp" />
+
+                <com.uk.uddr.utils.CTextBold
+                    android:id="@+id/txt_subtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txt_subtotal"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/line"/>
+
+
+                <com.uk.uddr.utils.CTextBold
+                    android:id="@+id/txt_pfees"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_total1"
+                    android:layout_marginTop="8dp"
+                    android:text="Service fee"
+
+                    android:layout_marginLeft="25dp"
+                    android:textColor="@color/light_dark_grey"
+                    android:textSize="16sp" />
+
+                <com.uk.uddr.utils.CTextBold
+                    android:id="@+id/txt_extrafees"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txt_total1"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:text="£0.49"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/relative_subtotal"
+                 android:layout_marginTop="5dp"
+                 android:background="@color/line" />
+
+
+            <RelativeLayout
+                android:id="@+id/relative_total"
+                android:layout_below="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp">
+
+                <com.uk.uddr.utils.CTextBold
+                    android:id="@+id/txtview_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+
+                    android:layout_marginLeft="25dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <com.uk.uddr.utils.CTextBold
+                    android:id="@+id/txt_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/relative_total"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_grey" />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

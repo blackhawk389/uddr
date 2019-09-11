@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.WriteReviewFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:elevation="16dp"
+        android:id="@+id/header">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:elevation="8dp"
+            android:padding="12dp"
+            android:src="@mipmap/back_black" />
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/txt_partner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/uddrblack"
+            android:maxLines="1"
+            android:text="Review"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:layout_below="@+id/header"
+        android:stepSize="0.5"
+        android:id="@+id/ratingBar"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:theme="@style/RatingBar"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:background="@null"
+        android:id="@+id/edt_review"
+        android:layout_below="@+id/ratingBar"
+        android:layout_marginTop="20dp"
+        android:hint="Write a review"
+        android:textColor="@color/uddrblack"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_below="@+id/edt_review"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="50dp"
+        android:background="@color/dark_grey"
+       />
+
+
+
+    <Button
+        android:layout_below="@+id/view_2"
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_login_bg"
+        android:text="Submit"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:visibility="gone"/>
+</RelativeLayout>

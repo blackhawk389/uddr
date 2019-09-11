@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="8dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relative_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp">
+
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/image_cardview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="110dp"
+                    android:layout_height="100dp"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="0dp">
+
+                    <ImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop" />
+                </android.support.v7.widget.CardView>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/image_cardview"
+                    android:layout_centerHorizontal="true">
+
+                    <com.uk.uddr.utils.CTextBold
+                        android:id="@+id/txt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <com.uk.uddr.utils.CTextSemiBold
+                        android:id="@+id/txt_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_name"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/dark_grey"
+                        android:textSize="14sp" />
+
+                    <com.uk.uddr.utils.CTextSemiBold
+                        android:id="@+id/btn_editprofile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_email"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="Edit Profile"
+                        android:textColor="@color/green"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_head"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rel_shipping"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="12dp">
+
+                        <ImageView
+                            android:id="@+id/img_ship"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_shippingaddress" />
+
+                        <com.uk.uddr.utils.CTextSemiBold
+                            android:id="@+id/txt_ship"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/img_ship"
+                            android:text="@string/shippingadd"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="15sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/relative_ship"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/btn_circle_grey">
+
+
+                            <ImageView
+                                android:id="@+id/icon_ship"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/ic_arrow_r" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/rel_shipping"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/line" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rel_customer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view1"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="12dp">
+
+                        <ImageView
+                            android:id="@+id/img_customer"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_customer" />
+
+                        <com.uk.uddr.utils.CTextSemiBold
+                            android:id="@+id/txt_customer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/img_customer"
+                            android:text="@string/customer"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/relative_customer"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/btn_circle_grey">
+
+
+                            <ImageView
+                                android:id="@+id/icon_customer"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/ic_arrow_r" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/rel_customer"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/line" />
+
+                    <RelativeLayout
+                        android:id="@+id/rel_rate"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view2"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_rate"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_rate" />
+
+                        <com.uk.uddr.utils.CTextSemiBold
+                            android:id="@+id/txt_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/img_rate"
+                            android:text="@string/rate"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="15sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/relative_rate"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/btn_circle_grey">
+
+
+                            <ImageView
+                                android:id="@+id/icon_rate"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/ic_arrow_r" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/rel_rate"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/line" />
+
+
+                    <RelativeLayout
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:id="@+id/rel_resetpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view3"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_resetpassword"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_password" />
+
+                        <com.uk.uddr.utils.CTextSemiBold
+                            android:id="@+id/txt_resetpassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/img_resetpassword"
+                            android:text="@string/resetpassword"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="15sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/relative_resetpassword"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/btn_circle_grey">
+
+
+                            <ImageView
+                                android:id="@+id/icon_resetpassword"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/ic_arrow_r" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/rel_resetpassword"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/line" />
+
+                    <RelativeLayout
+                        android:layout_marginLeft="12dp"
+
+                        android:layout_marginRight="12dp"
+                        android:id="@+id/rel_heart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view4"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_heart"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_favourite"
+                            android:tint="@color/dark_grey" />
+
+                        <com.uk.uddr.utils.CTextSemiBold
+                            android:id="@+id/txt_heart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/img_heart"
+                            android:text="Favorite Stores"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="15sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/relative_heart"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/btn_circle_grey">
+
+
+                            <ImageView
+                                android:id="@+id/icon_heart"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/ic_arrow_r" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <com.uk.uddr.utils.CButtonBold
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardview"
+                android:gravity="center|left"
+                android:paddingLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_login_bg"
+                android:text="@string/logout"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

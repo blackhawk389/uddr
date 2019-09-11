@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/image_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="30dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/order_image">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/img_logo"
+                    android:scaleType="centerCrop" />
+
+                <com.uk.uddr.utils.CTextSemiBold
+                    android:id="@+id/txt_store_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_centerInParent="true"
+                    android:text="fdafdsfa"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <com.uk.uddr.utils.CTextSemiBold
+                    android:id="@+id/txt_tag_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@+id/txt_store_name"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_image"
+                android:id="@+id/lin_detail"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3">
+
+                    <com.uk.uddr.utils.CTextSemiBold
+                        android:id="@+id/txt_orderstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="30dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <com.uk.uddr.utils.CTextSemiBold
+                        android:id="@+id/txt_orderdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_below="@+id/txt_orderstatus"
+                        android:text="March 24"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp" />
+
+                    <com.uk.uddr.utils.CTextSemiBold
+                        android:id="@+id/txt_orderID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_below="@+id/txt_orderdate"
+                        android:text="Order #637137686"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+
+                <!--<RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7">
+
+
+
+                    <Button
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/btn_card_bg"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:layout_below="@+id/btn_reorder"
+                        android:id="@+id/btn_orderdetail"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="VIEW DETAILS"/>
+                </RelativeLayout>-->
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#15707070"
+                android:layout_below="@+id/lin_detail"
+                android:layout_marginTop="10dp"
+                android:id="@+id/view"
+                />
+
+            <com.uk.uddr.utils.CTextSemiBold
+                android:id="@+id/txt_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@+id/view"
+                android:text="Total £12"
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/view"
+                android:background="@drawable/btn_card_bg"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/btn_reorder"
+                android:text="REORDER"/>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/image_cardview"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/light_grey"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:id="@+id/rel_orderdetail"
+            android:background="@drawable/orderbutton"
+            android:layout_weight="1">
+
+            <com.uk.uddr.utils.CTextBold
+                android:id="@+id/txt_viewdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_centerInParent="true"
+                android:text="View Detail"
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:id="@+id/rel_help"
+            android:background="@drawable/orderbutton"
+            android:layout_weight="1">
+
+
+            <com.uk.uddr.utils.CTextBold
+                android:id="@+id/txt_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_centerInParent="true"
+                android:text="Contact Us"
+                android:textColor="@color/dark_grey"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

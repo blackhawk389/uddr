@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.NewStoreDetail">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="16dp"
+        android:background="@color/white"
+        android:id="@+id/header">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:elevation="8dp"
+            android:padding="12dp"
+            android:src="@mipmap/back_black" />
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/txt_partner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/uddrblack"
+            android:maxLines="1"
+            android:text=""
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_above="@+id/btn_choose_service"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:visibility="gone"
+        android:layout_below="@+id/header">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:id="@+id/rel_recycler">
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/phot0_recycler_view"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/line_1"
+                android:background="@color/light_grey"
+                android:layout_below="@+id/rel_recycler"/>
+
+            <com.uk.uddr.utils.CTextBold
+                android:layout_below="@+id/line_1"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:text="Review Summary"
+                android:textSize="15sp"
+                android:id="@+id/txt_review_title"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/line_2"
+                android:layout_marginTop="8dp"
+                android:background="@color/light_grey"
+                android:layout_below="@+id/txt_review_title"/>
+
+            <LinearLayout
+                android:layout_below="@+id/line_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:weightSum="1"
+                android:id="@+id/len_rateing"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="5"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <com.uk.uddr.utils.CTextSemiBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:id="@+id/txt_rate_5"
+                                android:text="5"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                            <ImageView
+                                android:layout_toRightOf="@+id/txt_rate_5"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/img_star_5"
+                                android:layout_marginLeft="4dp"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_star"/>
+
+                            <ProgressBar
+                                android:layout_toRightOf="@+id/img_star_5"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/progressBar_5"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="4dp"
+                                android:layout_width="130dp"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_height="wrap_content" />
+                            <com.uk.uddr.utils.CTextSemiBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="4dp"
+                                android:id="@+id/txt_rating_5"
+                                android:layout_toRightOf="@id/progressBar_5"
+                                android:text="35"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <com.uk.uddr.utils.CTextSemiBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:id="@+id/txt_rate_4"
+                                android:text="4"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                            <ImageView
+                                android:layout_toRightOf="@+id/txt_rate_4"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/img_star_4"
+                                android:layout_marginLeft="4dp"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_star"/>
+
+                            <ProgressBar
+                                android:layout_toRightOf="@+id/img_star_4"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/progressBar_4"
+                                android:layout_gravity="center"
+                                android:layout_width="130dp"
+                                android:layout_marginLeft="4dp"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_height="wrap_content" />
+                            <com.uk.uddr.utils.CTextSemiBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="@color/black"
+                                android:id="@+id/txt_rating_4"
+                                android:layout_toRightOf="@id/progressBar_4"
+                                android:text="22"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <com.uk.uddr.utils.CTextSemiBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:id="@+id/txt_rate_3"
+                                android:text="3"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                            <ImageView
+                                android:layout_toRightOf="@+id/txt_rate_3"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/img_star_3"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_star"/>
+
+                            <ProgressBar
+                                android:layout_toRightOf="@+id/img_star_3"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="4dp"
+                                android:id="@+id/progressBar_3"
+                                android:layout_gravity="center"
+                                android:layout_width="130dp"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_height="wrap_content" />
+                            <com.uk.uddr.utils.CTextSemiBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="@color/black"
+                                android:id="@+id/txt_rating_3"
+                                android:layout_toRightOf="@id/progressBar_3"
+                                android:text="19"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <com.uk.uddr.utils.CTextSemiBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:id="@+id/txt_rate_2"
+                                android:text="2"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                            <ImageView
+                                android:layout_toRightOf="@+id/txt_rate_2"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/img_star_2"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_star"/>
+
+                            <ProgressBar
+                                android:layout_toRightOf="@+id/img_star_2"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/progressBar_2"
+                                android:layout_gravity="center"
+                                android:layout_width="130dp"
+                                android:layout_marginLeft="4dp"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_height="wrap_content" />
+                            <com.uk.uddr.utils.CTextSemiBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="4dp"
+                                android:id="@+id/txt_rating_2"
+                                android:layout_toRightOf="@id/progressBar_2"
+                                android:text="18"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <com.uk.uddr.utils.CTextSemiBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:id="@+id/txt_rate_1"
+                                android:text="1"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                            <ImageView
+                                android:layout_toRightOf="@+id/txt_rate_1"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/img_star_1"
+                                android:layout_marginLeft="4dp"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_star"/>
+
+                            <ProgressBar
+                                android:layout_toRightOf="@+id/img_star_1"
+                                android:layout_marginLeft="4dp"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/progressBar_1"
+                                android:layout_gravity="center"
+                                android:layout_width="130dp"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_height="wrap_content" />
+                            <com.uk.uddr.utils.CTextSemiBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:id="@+id/txt_rating_1"
+                                android:layout_toRightOf="@id/progressBar_1"
+                                android:text="6"
+                                android:layout_marginLeft="4dp"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight=".4"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <com.uk.uddr.utils.CTextSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="35sp"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/txt_rating"
+                            android:textColor="@color/green"
+                            android:text="4.5"/>
+
+                        <RatingBar
+                            android:layout_below="@+id/txt_rating"
+                            android:id="@+id/ratingBar"
+                            style="@style/customRatingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:numStars="5"
+                            android:layout_centerHorizontal="true"
+                            android:stepSize=".5"
+                            android:rating="4"
+                            android:theme="@style/RatingBar" />
+                        <com.uk.uddr.utils.CTextSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:layout_marginTop="8dp"
+                            android:textStyle="bold"
+                            android:layout_below="@+id/ratingBar"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/txt_rating_count"
+                            android:textColor="@color/black"
+                            android:text="(89 Reviews)"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_below="@+id/len_rateing"
+                android:layout_marginTop="12dp"
+                android:text="WRITE A REVIEW"
+                android:background="@color/green"
+                android:textColor="@color/white"
+                android:id="@+id/btn_write_review"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/comment_recycler_view"
+                android:layout_below="@+id/btn_write_review"
+                android:layout_marginTop="12dp"/>
+           <!-- <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/line_3"
+                android:layout_marginTop="12dp"
+                android:background="@color/light_grey"
+                android:layout_below="@+id/btn_write_review"/>-->
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <com.uk.uddr.utils.CButtonBold
+        android:layout_marginTop="2dp"
+        android:text="CHOOSE A SERVICE"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:id="@+id/btn_choose_service"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</RelativeLayout>

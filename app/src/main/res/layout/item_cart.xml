@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:elevation="0dp">
+
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/image_cardview"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="30dp"
+        android:padding="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/img_pimage"/>
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_toRightOf="@+id/image_cardview"
+        android:orientation="vertical">
+
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/txt_pname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="White Breads"
+            android:maxLines="1"
+            android:textColor="@color/dark_grey"
+            android:textSize="14sp" />
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/txt_pprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/txt_pname"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/green"
+            android:text="4.00"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_pprice"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:id="@+id/rel_button">
+
+
+            <RelativeLayout
+                android:id="@+id/relative_minus"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/img_arrow_white">
+
+                <ImageView
+                    android:id="@+id/icon_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_minus_b" />
+            </RelativeLayout>
+
+            <com.uk.uddr.utils.CTextBold
+                android:id="@+id/txt_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:id="@+id/relative_plus"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/img_arrow_white">
+
+
+                <ImageView
+                    android:id="@+id/icon_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_plus_b" />
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+<!--
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/txt_pdesc"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_card_bg">
+
+            <ImageView
+                android:id="@+id/img_cart_plus"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@mipmap/ic_pluss_w" />
+
+            <TextView
+                android:id="@+id/txt_cart_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_cart_plus"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/img_cart_minus"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_below="@+id/txt_cart_number"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@mipmap/ic_minus" />
+        </RelativeLayout>-->
+
+
+    </RelativeLayout>
+
+
+    <!--</android.support.v7.widget.CardView>-->
+
+
+</RelativeLayout>

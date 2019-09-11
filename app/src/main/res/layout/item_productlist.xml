@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="0dp"
+    app:cardBackgroundColor="@color/background"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.uk.uddr.utils.CTextBold
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toLeftOf="@+id/rel_adding"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/image_cardview"
+            android:text="White Breads"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/rel_adding"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="20dp">
+
+            <com.uk.uddr.utils.CTextBold
+                android:id="@+id/txt_add1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/btn_login_bg"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="ADD"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:id="@+id/rel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="0dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:visibility="gone">
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_minus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/img_arrow_white">
+
+                    <ImageView
+                        android:id="@+id/icon_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/ic_minus_b" />
+                </RelativeLayout>
+
+                <com.uk.uddr.utils.CTextBold
+                    android:id="@+id/txt_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_plus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/img_arrow_white">
+
+
+                    <ImageView
+                        android:id="@+id/icon_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/ic_plus_b" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rel_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_adding"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toRightOf="@+id/image_cardview">
+
+            <com.uk.uddr.utils.CTextSemiBold
+                android:id="@+id/selling_price1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:text="£15.00"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_eye"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="4dp"
+                    android:src="@mipmap/ic_eye"/>
+
+                <com.uk.uddr.utils.CTextSemiBold
+                    android:id="@+id/product_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/img_eye"
+                    android:maxLines="1"
+                    android:text="More Info"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line"/>
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:minHeight="170dp"
+    android:background="@drawable/comment_lay_bg"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rel_top"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/profile_image"
+            android:src="@drawable/dummy_round"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/ratingBar"
+            android:layout_toRightOf="@+id/profile_image">
+
+            <com.uk.uddr.utils.CTextBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Excellent Service"/>
+            <com.uk.uddr.utils.CTextregular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_date"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/txt_name"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="3 days ago"/>
+
+        </RelativeLayout>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:theme="@style/RatingBar"
+            android:id="@+id/ratingBar"
+            style="@style/customRatingBar"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:rating="4"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/rel_top">
+
+        <com.uk.uddr.utils.CTextregular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_grey2"
+            android:visibility="gone"
+            android:text="michal shawn"
+            android:textSize="14sp"/>
+        <com.uk.uddr.utils.CTextregular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp"
+            android:id="@+id/txt_desciption"
+            android:maxLines="3"
+            android:text="hey this is excellent service provickncdnkfwemrmfdmkv kvefmefmemvkfr vkfmv frkv r b nr k rve v k e kk  in  k j j  rj e der"
+            android:textSize="13sp"/>
+        <com.uk.uddr.utils.CTextSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:id="@+id/txt_report"
+            android:layout_marginTop="8dp"
+            android:text="Report"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

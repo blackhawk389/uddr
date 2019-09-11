@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Uddr</string>
+    <string name="hello">Hello!</string>
+    <string name="google_maps_key">AIzaSyCfNRQ0car56kLWwp-IQsMMsf2x9NO_sjg</string>
+    <string name="welcome">Welcome to uddr. Local services made simple!</string>
+    <string name="email">Email Address</string>
+    <string name="pass">Password</string>
+    <string name="have_account">Already have an account? Click here </string>
+    <string name="home">Home</string>
+    <string name="my_orders">My Orders</string>
+    <string name="search">Search</string>
+    <string name="cart">Basket</string>
+    <string name="profile">Profile</string>
+    <string name="facebook_app_id">428958657743192</string>
+    <string name="fb_login_protocol_scheme">fb428958657743192</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="PlaceOrderr">Your Basket</string>
+    <string name="searchcategory">Search Local Services</string>
+    <string name="logout">Signout</string>
+    <string name="shippingadd">Address</string>
+    <string name="customer">Customer Support</string>
+    <string name="rate">Rate uddr</string>
+    <string name="resetpassword">Reset Password</string>
+    <string name="selcetaddress">Select Address</string>
+    <string name="addnewaddress">Add New Address </string>
+    <string name="state">State</string>
+    <string name="address">Address Line</string>
+    <string name="name">Name</string>
+    <string name="city">City</string>
+    <string name="postalcode">Postcode</string>
+    <string name="phonenumber">Phone Number</string>
+    <string name="addaddress">Confirm Address</string>
+    <string name="newAddress">New Address</string>
+    <string name="selectAddress">Select Address</string>
+    <string name="zip_text">Enter your postcode to find services near you</string>
+    <string name="comment_order">Leave a message for your partner if you have any special requests or need to provide further information.</string>
+    <string name="orderdetail">Order Detail</string>
+    <string name="store_error">Your basket contains products from another partner. Do you want to abandon these items and replace them with products from this partner?</string>
+    <string name="yellow">Yellow Dough</string>
+    <string name="dummytext">Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum is simply dummy text of the printing and typesetting industry</string>
+    <string name="looking">Looking for Delivery?</string>
+    <string name="chooseservice">Choose Service</string>
+    <string name="productdetail">Product Details</string>
+    <string name="allfavstore">All your favorite Stores</string>
+    <string name="rightplace">Local Services Made Simple</string>
+    <string name="lorem_ipsum_txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+
+</resources>
