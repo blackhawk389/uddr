@@ -72,7 +72,8 @@ public class LoginActivity extends AppCompatActivity {
     private GoogleSignInClient googleSignInClient;
     private SignInButton googleSignInButton;
     private static final String TAG = "AndroidClarified";
-    private Button login;
+    private Button logingoogle;
+    private Button loginfb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,16 +100,29 @@ public class LoginActivity extends AppCompatActivity {
         txt_createaccount.setOnClickListener(clickListener);
         txt_forgot.setOnClickListener(clickListener);
         loginButton = (LoginButton) findViewById(R.id.login_button);
-        login = (Button) findViewById(R.id.fb);
+        googleSignInButton = findViewById(R.id.sign_in_button);
 
-        login.setOnClickListener(new View.OnClickListener() {
+        googleSignInButton.setBackgroundResource(R.drawable.google);
+
+        loginfb = (Button) findViewById(R.id.button);
+        logingoogle = (Button) findViewById(R.id.button2);
+
+        logingoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                googleSignInButton.performClick();
+            }
+        });
+
+        loginfb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginManager.getInstance().logInWithPublishPermissions(LoginActivity.this, Arrays.asList("email"));
                 loginButton.performClick();
             }
         });
-        googleSignInButton = findViewById(R.id.sign_in_button);
-        loginButton.setReadPermissions("email", "public_profile");
+
+       // loginButton.setReadPermissions("email", "public_profile");
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -128,7 +142,6 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
                         useLoginInformation(loginResult.getAccessToken());
-
                     }
 
                     @Override

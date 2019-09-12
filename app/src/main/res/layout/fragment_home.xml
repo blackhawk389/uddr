@@ -62,10 +62,12 @@
         android:id="@+id/relative_location"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:clipToPadding="false"
         android:layout_below="@+id/rel_uddr"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="-52dp"
         android:layout_marginRight="16dp"
+        android:elevation="20dp"
         android:background="@drawable/btn_green_bg">
 
         <ImageView

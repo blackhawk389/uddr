@@ -251,6 +251,7 @@ public class HomeFragment extends Fragment {
                                 recycleview1.setItemAnimator(new DefaultItemAnimator());
                                 FeatureStoreAdapter featureStoreAdapter=new FeatureStoreAdapter(mContext,featurestores);
                                 recycleview1.setAdapter(featureStoreAdapter);
+                                productfeature.setVisibility(View.VISIBLE);
 
                             } else {
                                 progressBar.setVisibility(View.GONE);
